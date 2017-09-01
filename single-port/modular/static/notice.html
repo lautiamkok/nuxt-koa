@@ -1,0 +1,11 @@
+<h1>Warning!</h1>
+<p>Make sure to serve static files away from the <em>app</em> dir for security reason.
+<p>static files are served with koa-static.
+<p>you can change static file root in <em>app/config/index.js</em>
+<h2>Config sample</h2>
+<pre style="background:#eee;padding:10px;">
+  static_dir: {
+    root: './static',
+    options: {}
+  },
+</pre>

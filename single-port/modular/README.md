@@ -33,7 +33,8 @@ Core Dependencies
 * [koa-mount](https://github.com/koajs/mount) - Mount other Koa applications or middleware to a given pathname.
 * [trie-router](https://github.com/koajs/trie-router) - Trie routing for Koa based on routington.
 * [mongodb](https://github.com/mongodb/node-mongodb-native) - The official MongoDB driver for Node.js. Provides a high-level API on top of mongodb-core that is meant for end users.
+* [lodash](https://github.com/lodash/lodash) - A modern JavaScript utility library delivering modularity, performance, & extras.
 * [socket.io](https://github.com/socketio/socket.io/) - Socket.IO enables real-time bidirectional event-based communication.
 * [nuxt](https://github.com/nuxt/nuxt.js) - A framework for creating Universal Vue.js Applications.
-* [axios](https://github.com/mzabriskie/axios -Promise based HTTP client for the browser and node.js)
+* [axios](https://github.com/mzabriskie/axios) -Promise based HTTP client for the browser and node.js)
 * [cross-env](https://github.com/kentcdodds/cross-env) - Run scripts that set and use environment variables across platforms

@@ -1,11 +1,7 @@
-Using Mocha with ES6 spec files.
+Mocha + ES6
 ===========
 
-http://krasimirtsonev.com/blog/article/using-mocha-with-es6-spec-files
-http://jamesknelson.com/testing-in-es6-with-mocha-and-babel-6/
-https://stackoverflow.com/questions/33793504/using-webpack-aliases-in-mocha-tests
-
-# Example:
+# Example
 
 ```bash
 // package.json
@@ -21,8 +17,9 @@ https://stackoverflow.com/questions/33793504/using-webpack-aliases-in-mocha-test
 }
 ```
 
-# workflow:
+# workflow
 
+```bash
            spec files written in
            plain ES6 JavaScript
              |
@@ -36,9 +33,15 @@ mocha ---> running the tests
              |
              |
            test results
+```
 
+# References
 
-Recursive V modular testing
+* http://krasimirtsonev.com/blog/article/using-mocha-with-es6-spec-files
+* http://jamesknelson.com/testing-in-es6-with-mocha-and-babel-6/
+* https://stackoverflow.com/questions/33793504/using-webpack-aliases-in-mocha-tests
+
+Recursive Vs Modular Testing
 ===========
 
 1. To test specific module only, e.g. home:
@@ -59,7 +62,7 @@ Recursive V modular testing
 }
 ```
 
-# Sample test
+# Sample
 
 If you have the test file, e.g. test.js in the test root directory:
 
@@ -79,12 +82,16 @@ describe('GET /api', function () {
       .expect(200, done)
   })
 })
-```bash
+```
 
 But, when you create a test file in a module, since you have set `NODE_PATH=./server`, then change:
 
+```
 import app from '../server/index'
+```
 
 To:
 
+```
 import app from 'index'
+```

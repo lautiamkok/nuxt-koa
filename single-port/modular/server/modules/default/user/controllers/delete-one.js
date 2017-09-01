@@ -3,7 +3,6 @@
 import User from '../models/user'
 
 export default async (ctx) => {
-
   let body = ctx.request.body || {}
   if (body._id === undefined) {
     // Throw the error.

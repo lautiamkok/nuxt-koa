@@ -3,7 +3,6 @@
 import User from '../models/user'
 
 export default async (ctx) => {
-
   let body = ctx.request.body || {}
   if (body.name === undefined) {
     // Throw the error.
@@ -20,7 +19,6 @@ export default async (ctx) => {
 
   // Inject a doc.
   const result = await user.insert(document)
-  const userId = result.ops[0]._id.toString()
 
   data = JSON.stringify(result)
 

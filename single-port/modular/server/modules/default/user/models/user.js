@@ -75,7 +75,7 @@ export default class User extends Model {
   }
 
   // https://docs.mongodb.com/manual/reference/method/db.collection.findOneAndUpdate/
-  async findOneAndUpdate (filter, update, options) {
+  async findOneAndUpdate (find, update, options) {
     let result
 
     // Get the db connection.
@@ -84,9 +84,9 @@ export default class User extends Model {
     // Get the collection.
     const collectionUsers = db.collection('users')
 
-    var filter = filter || {}
-    var update = { $set: update } || {}
-    var options = options || {
+    find = find || {}
+    update = { $set: update } || {}
+    options = options || {
       // The Node.js driver documentation doesn't mention a returnNewDocument
       // option for findOneAndUpdate() (which is an option for the MongoDB shell
       // command with the same name).
@@ -94,11 +94,11 @@ export default class User extends Model {
       // true. Try using that option, setting it to false to return the updated
       // document instead of the original.
       // https://stackoverflow.com/questions/35626040/findoneandupdate-used-with-returnnewdocumenttrue-returns-the-original-document
-       returnOriginal: false
-     }
+      returnOriginal: false
+    }
 
     result = await collectionUsers.findOneAndUpdate(
-      filter,
+      find,
       update,
       options
     )

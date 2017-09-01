@@ -6,7 +6,6 @@ import { example1, example2 } from 'utils'
 // import utils from '../utils'
 
 export default async (ctx) => {
-  
   console.log(await example1())
   console.log(await example2())
   // Or, option 2:

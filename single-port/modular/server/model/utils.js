@@ -9,10 +9,10 @@ function sanitize (options, schema) {
     // ctx is not passed into this level so can't do:
     // ctx.throw(400, '_id is required.')
     // So use a native error and throw it.
-    const err = new Error('Schema is required.');
-    err.status = 400;
-    err.expose = true;
-    throw err;
+    const err = new Error('Schema is required.')
+    err.status = 400
+    err.expose = true
+    throw err
   }
 
   // Get the keys from the object.

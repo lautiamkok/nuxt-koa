@@ -19,16 +19,4 @@ export default class Model {
     const connection = await mongo.connect()
     return connection
   }
-
-  async insert (options) {
-    //
-  }
-
-  async find (options) {
-    //
-  }
-
-  async remove (options) {
-    //
-  }
 }

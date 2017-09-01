@@ -3,7 +3,6 @@
 import User from '../models/user'
 
 export default async (ctx) => {
-
   let user = new User()
 
   let body = ctx.request.body || {}

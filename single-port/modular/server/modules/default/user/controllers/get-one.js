@@ -3,7 +3,6 @@
 import User from '../models/user'
 
 export default async (ctx) => {
-
   var name = ctx.params.name
   if (name === undefined) {
     ctx.throw(400, 'name is required.')

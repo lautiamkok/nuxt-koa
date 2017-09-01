@@ -10,8 +10,7 @@ const request = supertest.agent(app)
 
 // https://mochajs.org/#synchronous-code
 // https://mochajs.org/#hooks
-describe('User', function() {
-
+describe('User', function () {
   let mongo
   let db
   let collection
@@ -21,7 +20,7 @@ describe('User', function() {
   let result
 
   // Runs before all tests in this block.
-  before(async function() {
+  before(async function () {
     mongo = new Mongo()
     db = await mongo.connect()
     collection = db.collection('users')
@@ -35,20 +34,20 @@ describe('User', function() {
   })
 
   // Runs after all tests in this block.
-  after(async function() {
+  after(async function () {
     collection.drop()
   })
 
   // Runs before each test in this block.
-  beforeEach(async function() {
+  beforeEach(async function () {
     user = new User()
   })
 
   // Test insert().
-  describe('#insert()', function() {
-    it('should insert without error', async function() {
+  describe('#insert()', function () {
+    it('should insert without error', async function () {
       console.log(user)
-      result = await user.insert({ id:' 1234', name: 'jane' })
+      result = await user.insert({ id: ' 1234', name: 'jane' })
       console.log(result)
 
       name = result.ops[0].name.toString()
@@ -59,16 +58,16 @@ describe('User', function() {
   })
 
   // Test find()
-  describe('#find()', function() {
-    it('should find without error', async function() {
+  describe('#find()', function () {
+    it('should find without error', async function () {
       result = await user.find()
       assert.equal(result.length, 1)
     })
   })
 
   // Test findOne()
-  describe('#findOne()', function() {
-    it('should find one without error', async function() {
+  describe('#findOne()', function () {
+    it('should find one without error', async function () {
       result = await user.findOne({ name: name })
       console.log(result)
 
@@ -78,11 +77,11 @@ describe('User', function() {
   })
 
   // Test findOneAndUpdate()
-  describe('#findOneAndUpdate()', function() {
-    it('should find one and update without error', async function() {
+  describe('#findOneAndUpdate()', function () {
+    it('should find one and update without error', async function () {
       result = await user.findOneAndUpdate(
         { _id: user.objectId(_id), name: name },
-        { name: 'janey' } ,
+        { name: 'janey' },
         { returnOriginal: false }
       )
       console.log(result)
@@ -96,8 +95,8 @@ describe('User', function() {
   let data
   let ok
   let parsed
-  describe('#remove()', function() {
-    it('should find one and update without error', async function() {
+  describe('#remove()', function () {
+    it('should find one and update without error', async function () {
       result = await user.remove({ _id: user.objectId(_id)})
       data = JSON.stringify(result)
       console.log(data)
@@ -107,5 +106,4 @@ describe('User', function() {
       assert.equal(ok, 1)
     })
   })
-
 })

@@ -41,7 +41,7 @@ describe('POST /api/users with data', function () {
       .send({name: 'tommy'})
       .expect('Content-Type', /json/)
       .expect(200)
-      .end(function(err, res) {
+      .end(function (err, res) {
         console.log(res.body)
         if (err) return done(err)
 
@@ -67,7 +67,7 @@ describe('GET /api/users/:name', function () {
       // }, done)
       // or:
       .expect(200)
-      .end(function(err, res) {
+      .end(function (err, res) {
         console.log(res.body)
         if (err) return done(err)
 
@@ -105,7 +105,7 @@ describe('PUT /api/users with data', function () {
       })
       .expect('Content-Type', /json/)
       .expect(200)
-      .end(function(err, res) {
+      .end(function (err, res) {
         console.log(res.body)
         if (err) return done(err)
 
@@ -140,12 +140,12 @@ describe('DELETE /api/users with data', function () {
       .send({ _id: _id })
       .expect('Content-Type', /json/)
       .expect(200)
-      .end(function(err, res) {
+      .end(function (err, res) {
         console.log(res.body)
         if (err) return done(err)
 
         const ok = res.body.ok
-        assert(ok , 1)
+        assert(ok, 1)
 
         done()
       })

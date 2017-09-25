@@ -1,7 +1,7 @@
 Nuxt-Koa
 ===========
 
-A basic sample Koa application + Nuxt.
+A basic sample Nuxt application with Koa.
 
 Koa handles the controller and the model as an API. Nuxt handles the view and calls the API, e.g http://127.0.0.1:3000/ (from Nuxt) will call http://127.0.0.1:3000/api (from Koa).
 

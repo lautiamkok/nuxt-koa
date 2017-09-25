@@ -1,4 +1,4 @@
-Nuxt-Koa
+Nuxt + Koa
 ===========
 
 A basic sample Nuxt application with Koa.

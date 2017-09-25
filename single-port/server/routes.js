@@ -1,7 +1,6 @@
 'use strict'
 
 import Router from 'koa-trie-router'
-import config from './config'
 
 const router = new Router()
 

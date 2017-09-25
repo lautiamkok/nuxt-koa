@@ -1,29 +1,20 @@
 'use strict'
 
-const database = {
-  host: 'localhost',
-  port: 27017,
-  dbname: process.env.NODE_ENV === 'test' ? 'koatest' : 'koa'
-}
+const dbname = process.env.NODE_ENV === 'test' ? 'koatest' : 'koa'
 
-// module.exports = { // ES5
 export default {
   app: {
-    name: 'Koa',
+    name: 'something',
     version: '1.0.0'
   },
   database: {
-    host: database.host,
-    port: database.port,
-    dbname: database.dbname,
+    driver: 'mongo',
+    host: 'localhost',
+    port: 27017,
+    dbname: dbname,
     username: 'admin',
     password: '123456',
-    url: 'mongodb://' + database.host + ':' + database.port + '/' + database.dbname,
     options: {
-      max: 100,
-      min: 1
-    },
-    collections: {
     }
   },
   server: {
@@ -34,6 +25,6 @@ export default {
     options: {}
   },
   session: {
-    secretKey: 'myKoajsSecretKey'
+    secretKey: 'something'
   }
 }

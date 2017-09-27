@@ -1,0 +1,38 @@
+{
+  "name": "nuxt-koa",
+  "version": "1.0.0",
+  "description": "Creating a Nuxt application with Koa",
+  "main": "server/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "homepage": "https://github.com/lautiamkok",
+  "author": {
+    "name": "lau tiam kok",
+    "email": "contact@lauthiamkok.net",
+    "url": "https://github.com/lautiamkok"
+  },
+  "repository": "https://github.com/lautiamkok/nuxt-koa",
+  "dependencies": {
+    "cross-env": "^5.0.1",
+    "kcors": "^2.2.1",
+    "koa": "^2.3.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-mount": "^3.0.0",
+    "koa-static": "^4.0.1",
+    "koa-trie-router": "^2.1.5"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "backpack-core": "^0.4.1"
+  },
+  "scripts": {
+    "dev": "backpack dev",
+    "build": "backpack build",
+    "start": "cross-env NODE_ENV=production node build/main.js"
+  },
+  "keywords": [
+    "Koa"
+  ],
+  "license": "MIT"
+}

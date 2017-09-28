@@ -15,17 +15,13 @@
   "repository": "https://github.com/lautiamkok/nuxt-koa",
   "dependencies": {
     "axios": "^0.16.2",
-    "cross-env": "^5.0.1",
     "nuxt": "^1.0.0-rc3"
   },
-  "devDependencies": {
-    "babel-eslint": "^7.2.3",
-    "backpack-core": "^0.4.1"
-  },
   "scripts": {
-    "dev": "backpack dev",
-    "build": "nuxt build && backpack build",
-    "start": "nuxt"
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
   },
   "keywords": [
     "Nuxt"

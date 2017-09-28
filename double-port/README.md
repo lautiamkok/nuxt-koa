@@ -3,19 +3,48 @@ Nuxt + Koa
 
 A basic sample Nuxt application with Koa.
 
-Koa handles the controller and the model as an API. Nuxt handles the view and calls the API, e.g http://127.0.0.1:3000/ (from Nuxt) will call http://127.0.0.1:3000/api (from Koa).
+Koa handles the controller and the model as an API. Nuxt handles the view and calls the API, e.g http://127.0.0.1:3000/ (from Nuxt) will call http://127.0.0.1:3030/api (from Koa).
 
-quick start
+Quick start
 =============
 
+## Build Setup (Koa/ API)
+
 ``` bash
-# install dependencies
+# Dependencies
 $ npm install
 
-# serve with hot reload at localhost:3000
+# Development
 $ npm run dev
 
-# build for production and launch server
+# Production build
 $ npm start
 ```
-Then, access it at http://localhost:3000/
+
+Access it at http://localhost:3030/
+
+## Build Setup (Nuxt)
+
+``` bash
+# Dependencies
+$ npm install
+
+# Development
+$ npm run dev
+
+# Production build
+$ npm start
+```
+
+Access it at http://localhost:3000/
+
+Notes
+=============
+
+1. For this approach, you must run these two apps concurrently.
+
+References
+=============
+
+* https://nuxtjs.org/guide/commands/
+

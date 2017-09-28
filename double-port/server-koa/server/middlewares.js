@@ -6,7 +6,7 @@ import serve from 'koa-static'
 import bodyParser from 'koa-bodyparser'
 import config from './config'
 import routes from './routes'
-const cors = require('kcors')
+import cors from 'kcors'
 
 export default (app) => {
   // Catch and format the error in the upstream.
@@ -55,6 +55,7 @@ export default (app) => {
   // https://github.com/koajs/koa/issues/719
   app.use(bodyParser())
 
+  // CORS.
   // https://github.com/koajs/cors
   app.use(cors({
     origin: 'http://127.0.0.1:3000',

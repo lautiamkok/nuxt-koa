@@ -3,6 +3,8 @@ Nuxt + Koa
 
 Basic samples creating a Nuxt application with Koa.
 
+Read the [post](https://www.codementor.io/lautiamkok/creating-a-nuxt-application-with-koa-express-and-slim-cfqjp0ylw) about this repository.
+
 Dependencies
 ==========
 * [nuxt](https://github.com/nuxt/nuxt.js) - A framework for creating Universal Vue.js Applications.
